@@ -15,7 +15,7 @@ recognition.interimResults = false;
 recognition.onresult = function(event) {
     var lastResult = event.results.length - 1;
     var content = event.results[lastResult][0].transcript;
-    message.textContent = 'Voice Input: ' + content + '.';
+    message.textContent = content;
 };
 
 recognition.onspeechend = function() {
